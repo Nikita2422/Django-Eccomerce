@@ -27,6 +27,8 @@
   
           {% if user.is_authenticated %}
           <li class="nav-item">
+            <a class="nav-link" href="{% url 'update_user' %}">Profile</a>
+          <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
           </li>
           {% else %}
@@ -50,7 +52,7 @@
               >Categories</a
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'home' %}">All Products</a></li>
+              <li><a class="dropdown-item" href="{% url 'category_summary' %}">All Products</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="{% url 'category' 'Programming-Books' %}">Programming Books</a></li>
               <li><a class="dropdown-item" href="{% url 'category' 'Marketing-Books' %}">Marketing Books</a></li>
